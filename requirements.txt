@@ -1,0 +1,26 @@
+# Core Libraries
+numpy
+pandas
+scikit-learn
+tqdm
+
+# NLP and Transformers
+transformers==4.41.1
+datasets
+sentence-transformers
+nltk
+spacy
+
+# FAISS for vector search
+faiss-cpu
+
+# PyTorch for model training/inference
+torch
+
+# For Summarization and Tokenization
+rouge-score
+evaluate
+
+# Notebook environment
+jupyter
+ipykernel
