@@ -11,9 +11,9 @@ This repository contains two key AI tools for legal assistance:
 
 ```
 
-📁 /legal\_chatbot.ipynb         # Chatbot using Retrieval-Augmented Generation (RAG)
-📁 /bartseq2seq.ipynb           # Seq2Seq fine-tuning of BART for summarization
-📁 /Legal\_summarizer\_final.ipynb # Final pipeline for summarizing legal documents
+📁 legal_chatbot.ipynb         # Chatbot using Retrieval-Augmented Generation (RAG)
+📁 bartseq2seq.ipynb           # Seq2Seq fine-tuning of BART for summarization
+📁 Legal_summarizer_final.ipynb # Final pipeline for summarizing legal documents
 
 ````
 
@@ -38,7 +38,7 @@ This repository contains two key AI tools for legal assistance:
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/yourusername/legal-ai-assistant.git
+git clone https://github.com/Anshul-ydv/Legal-ai.git
 cd legal-ai-assistant
 ````
 
