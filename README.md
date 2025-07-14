@@ -1,9 +1,9 @@
 # 🧠 Legal AI Assistant & Summarizer 🏛️
 
-This repository contains two key AI tools for legal assistance:
+This repository contains two powerful AI-based tools designed for legal assistance and judgment summarization:
 
-1. **Legal Chatbot** – An intelligent assistant for answering legal queries based on Indian law.
-2. **Legal Summarizer** – A summarization tool for compressing lengthy legal judgments using a fine-tuned BART model.
+1. **Legal Chatbot** – A retrieval-based assistant that answers legal questions using Indian law sources.
+2. **Legal Summarizer** – A fine-tuned BART model that compresses lengthy legal judgments into concise summaries.
 
 ---
 
@@ -11,9 +11,21 @@ This repository contains two key AI tools for legal assistance:
 
 ```
 
-📁 legal_chatbot.ipynb         # Chatbot using Retrieval-Augmented Generation (RAG)
-📁 bartseq2seq.ipynb           # Seq2Seq fine-tuning of BART for summarization
-📁 Legal_summarizer_final.ipynb # Final pipeline for summarizing legal documents
+LegalCompanion/
+│
+├── Legal\_Chatbot/
+│   ├── legal\_chatbot\_final.ipynb   # Main chatbot notebook
+│   ├── chatbot\_utils.py            # Helper functions for chatbot
+│   └── vector\_store/               # FAISS index and ingested docs
+│
+├── Legal\_Summarizer/
+│   ├── bartseq2seq.ipynb           # BART fine-tuning notebook
+│   ├── Legal\_summarizer\_final.ipynb # Final summarization pipeline
+│   └── summarizer\_utils.py         # Supporting utilities
+│
+├── requirements.txt                # Dependencies
+├── LICENSE                         # MIT License
+└── README.md                       # Project documentation
 
 ````
 
@@ -22,27 +34,27 @@ This repository contains two key AI tools for legal assistance:
 ## 🚀 Features
 
 ### ✅ Legal Chatbot
-- 🔍 Retrieval-Augmented Generation using FAISS
-- 📚 Trained on Indian Constitution, IPC, CrPC, etc.
-- 🤖 Answers questions across major legal domains
-- 📄 Supports document-based Q&A
+- 🔍 **Retrieval-Augmented Generation (RAG)** using FAISS
+- 📚 Ingests documents from Indian law: Constitution, IPC, CrPC, etc.
+- 🤖 Answers domain-specific legal questions
+- 📄 Document-aware legal Q&A (PDF ingestion supported)
 
 ### ✅ Legal Summarizer
-- 🔄 Fine-tuned BART model on Indian Legal Case Law
-- 🧾 Extractive + Abstractive summary support
-- 🧠 Trained on `d0r1h/ILC` dataset from HuggingFace
+- 🔄 Fine-tuned **BART** model for legal judgment summarization
+- ✂️ Combines extractive and abstractive techniques
+- 🧠 Trained on [d0r1h/ILC](https://huggingface.co/datasets/d0r1h/ILC)
 
 ---
 
 ## 🛠️ Installation
 
-1. Clone the repo:
+1. Clone the repository:
 ```bash
 git clone https://github.com/Anshul-ydv/Legal-ai.git
-cd legal-ai-assistant
+cd LegalCompanion
 ````
 
-2. Install required packages:
+2. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -52,58 +64,66 @@ pip install -r requirements.txt
 
 ## 🧪 Usage
 
-### Run Legal Chatbot:
+### 📘 Run the Legal Chatbot
+
+1. Navigate to the `Legal_Chatbot/` folder.
+2. Open and run:
 
 ```bash
-# Open the notebook
-legal_chatbot.ipynb
-
-# Follow the cells to ingest legal docs and start querying
+legal_chatbot_final.ipynb
 ```
 
-### Run Legal Summarizer:
+3. Follow the steps to load your corpus, generate embeddings, and interact with the assistant.
+
+### 📄 Run the Legal Summarizer
+
+1. Go to `Legal_Summarizer/`.
+2. Open and run:
 
 ```bash
-# Open the notebook
 Legal_summarizer_final.ipynb
-
-# Run cells to load model and summarize documents
 ```
+
+3. Provide legal text input and get summarized outputs using the fine-tuned model.
 
 ---
 
 ## 📊 Dataset Info
 
-* 📦 Summarizer Dataset: [d0r1h/ILC](https://huggingface.co/datasets/d0r1h/ILC)
-* 📚 Chatbot Corpus: Structured QA pairs from Indian law
+* 📦 **Summarizer Dataset**: [d0r1h/ILC](https://huggingface.co/datasets/d0r1h/ILC)
+* 📚 **Chatbot Corpus**: QA pairs and legal documents from Indian legal sources (manually or automatically curated)
 
 ---
 
-## 📌 Tech Stack
+## ⚙️ Tech Stack
 
-* Python · HuggingFace Transformers · FAISS · PyTorch · Google Colab · NLTK · Sklearn · Streamlit (optional UI)
+* Python · PyTorch · HuggingFace Transformers
+* FAISS · Google Colab · NLTK · Sklearn
+* Optional UI: Streamlit or Gradio
 
 ---
 
 ## 💡 Future Improvements
 
-* Add support for multilingual legal queries
-* Deploy chatbot as a web app (FastAPI + Streamlit)
-* Extend summarization to multi-modal court documents
+* 🌐 Add multilingual query support (Hindi, Bengali, etc.)
+* 🌍 Deploy as a web app using FastAPI + Streamlit
+* 📎 Add support for OCR and audio-based legal queries
+* 📊 Visual analytics dashboard for legal search trends
 
 ---
 
 ## 🙌 Acknowledgements
 
-* Indian Legal Corpus by [ILC on HuggingFace](https://huggingface.co/datasets/d0r1h/ILC)
-* HuggingFace Transformers and Datasets
-* OpenAI & FAISS for vector retrieval
+* Indian Legal Corpus – [d0r1h/ILC](https://huggingface.co/datasets/d0r1h/ILC)
+* HuggingFace Ecosystem (Transformers, Datasets)
+* FAISS by Meta AI
+* OpenAI APIs for comparison and benchmarking
 
 ---
 
 ## 📃 License
 
-This project is open-source under the [MIT License](LICENSE).
+This project is open-sourced under the [MIT License](LICENSE).
 
 ---
 
@@ -111,3 +131,4 @@ This project is open-source under the [MIT License](LICENSE).
 
 > “This AI has read more Indian laws than most lawyers.” ⚖️🤖
 
+```
