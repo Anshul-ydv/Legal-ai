@@ -129,6 +129,4 @@ This project is open-sourced under the [MIT License](LICENSE).
 
 ## ✨ Fun Fact
 
-> “This AI has read more Indian laws than most lawyers.” ⚖️🤖
-
-```
+> “This AI has read more Indian laws than most lawyers.” ⚖️
